@@ -12,7 +12,7 @@
 % \iffalse
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamercolorthememetropolis}[2017/01/23 Metropolis color theme]
+\ProvidesPackage{beamercolorthemelantian}[2017/01/23 Metropolis color theme]
 %</package>
 % \fi
 % \CheckSum{0}
@@ -39,10 +39,10 @@
 %    |theorem| and |example|.
 %    \begin{macrocode}
 \pgfkeys{
-  /metropolis/color/block/.cd,
+  /lantian/color/block/.cd,
     .is choice,
-    transparent/.code=\metropolis@block@transparent,
-    fill/.code=\metropolis@block@fill,
+    transparent/.code=\lantian@block@transparent,
+    fill/.code=\lantian@block@fill,
 }
 %    \end{macrocode}
 % \end{macro}
@@ -52,19 +52,19 @@
 %    of the reverse.
 %    \begin{macrocode}
 \pgfkeys{
-  /metropolis/color/background/.cd,
+  /lantian/color/background/.cd,
     .is choice,
-    dark/.code=\metropolis@colors@dark,
-    light/.code=\metropolis@colors@light,
+    dark/.code=\lantian@colors@dark,
+    light/.code=\lantian@colors@light,
 }
 %    \end{macrocode}
 % \end{macro}
 %
-% \begin{macro}{\metropolis@color@setdefaults}
+% \begin{macro}{\lantian@color@setdefaults}
 %    Sets default values for color theme options.
 %    \begin{macrocode}
-\newcommand{\metropolis@color@setdefaults}{
-  \pgfkeys{/metropolis/color/.cd,
+\newcommand{\lantian@color@setdefaults}{
+  \pgfkeys{/lantian/color/.cd,
     background=light,
     block=transparent,
   }
@@ -78,9 +78,13 @@
 %
 %    \begin{macrocode}
 \definecolor{mDarkBrown}{HTML}{604c38}
-\definecolor{mDarkTeal}{HTML}{23373b}
-\definecolor{mLightBrown}{HTML}{EB811B}
-\definecolor{mLightGreen}{HTML}{14B03D}
+%\definecolor{mDarkTeal}{HTML}{23373b}
+%\definecolor{mDarkTeal}{HTML}{465977}
+\definecolor{mDarkTeal}{HTML}{445775}  % Darker text use 1c2f4d
+%\definecolor{mLightBrown}{HTML}{EB811B}
+\definecolor{mLightBrown}{HTML}{eb811b}
+%\definecolor{mLightGreen}{HTML}{14B03D}
+\definecolor{mLightGreen}{HTML}{0f822d}
 %    \end{macrocode}
 %
 %
@@ -91,16 +95,16 @@
 % |alerted text|, and |example text|.
 %
 %    \begin{macrocode}
-\newcommand{\metropolis@colors@dark}{
+\newcommand{\lantian@colors@dark}{
   \setbeamercolor{normal text}{%
     fg=black!2,
     bg=mDarkTeal
   }
   \usebeamercolor[fg]{normal text}
 }
-\newcommand{\metropolis@colors@light}{
+\newcommand{\lantian@colors@light}{
   \setbeamercolor{normal text}{%
-    fg=mDarkTeal,
+    fg==1c2f4d,
     bg=black!2
   }
 }
@@ -179,7 +183,7 @@
 % if changing colors mid-presentation.
 %
 %    \begin{macrocode}
-\newcommand{\metropolis@block@transparent}{
+\newcommand{\lantian@block@transparent}{
   \setbeamercolor{block title}{%
     use=normal text,
     fg=normal text.fg,
@@ -189,7 +193,7 @@
     bg=
   }
 }
-\newcommand{\metropolis@block@fill}{
+\newcommand{\lantian@block@fill}{
   \setbeamercolor{block title}{%
     use=normal text,
     fg=normal text.fg,
@@ -237,8 +241,8 @@
 % \subsubsection{Process package options}
 %
 %    \begin{macrocode}
-\metropolis@color@setdefaults
-\ProcessPgfPackageOptions{/metropolis/color}
+\lantian@color@setdefaults
+\ProcessPgfPackageOptions{/lantian/color}
 %    \end{macrocode}
 %
 %    \begin{macrocode}

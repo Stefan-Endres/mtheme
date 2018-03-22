@@ -1,0 +1,5 @@
+#!/bin/bash
+make sty
+rm -r /usr/share/texmf-dist/tex/latex/beamertheme-lantian/
+mkdir /usr/share/texmf-dist/tex/latex/beamertheme-lantian/ 
+cp *.sty /usr/share/texmf-dist/tex/latex/beamertheme-lantian/ 
